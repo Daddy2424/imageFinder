@@ -105,7 +105,7 @@ body{
 
 
 .backgroundImage{
-  background-image: url(assets/siteNameBack.jpg);
+  background-image: url(siteNameBack.jpg);
   background-size: cover;
   width: 100%;
   padding-top: 17%;
