@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif ;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+.imgcontainer{
+  display: grid;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-left: 50px;
+  margin-top: 35px;
+}
+
+@media screen and (max-width: 900px){
+  .imgcontainer{
+    grid-template-columns: repeat(2,1fr);
+    gap: 0px;
+    margin-left: 23px;
+    margin-top: 13px;
+  }
+}
+
+
+.imgcontainer img{
+  width: 21em;
+  margin: 3px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px){
+  .imgcontainer img{
+    width: 11em;
+  
+  }
+}
+
+.searchcontainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.searchelements{
+  display: flex;
+  position: relative;
+  top: 10%;
+  width: 100%;
+  height: 100px;
+  padding: 32px;
+  justify-content: center;
+  gap: 8px;
+  z-index: 100;
+  margin-top: -100px;
+  padding-left: 6em;
+}
+
+@media screen and (max-width: 900px){
+  .searchelements{
+    margin-top: -80px;
+    padding-left: 2em;
+  }
+}
+
+.siteName{
+  position: absolute;
+  font-weight: 550;
+  font-size: 23px;
+  color: white;
+  width: 100%;
+  top: 4%;
+  padding-left: 3em;
+}
+
+@media screen and (max-width: 900px){
+
+  .siteName{
+    padding-left: 1em;
+  }
+
+}
+  
+  
+  
+
+
+.siteNameBackground{
+  width: 100%;
+  overflow: hidden;
+  height: 230px;
+}
+
+
+
+.backgroundImage{
+  background-image: url(assets/siteNameBack.jpg);
+  background-size: cover;
+  width: 100%;
+  padding-top: 17%;
+}
+@media screen and (max-width: 900px) {
+
+  .backgroundImage{
+    padding-top: 75%;
+  }
+  
+}
+
+.description{
+  position: absolute;
+  top: 14%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.descriptionSentences{
+  color: white;
+}
+.first{
+  margin-left: 40px;
+  
+}
+
+@media screen and (max-width: 900px) {
+
+  .first{
+    margin-top: 3px;
+  }
+  
+}
+
+
+.inputbox{
+  border: none;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 5em;
+}
+
+.search-btn{
+  width: 14px;
+  height: 14px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  position: relative;
+  right: 6%;
+  top: 29%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-btn::before{
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: gray;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 4px;
+  transition: 0.3s;
+}
+.search-btn:hover{
+  border: 2px solid green;
+}
+.search-btn:hover::before{
+  background-color: green;
+}
+@media screen and (max-width: 600px){
+
+  .search-btn{
+    margin-left: -17px;
+  }
+  
+}
+@media screen and (min-width: 900px) {
+
+  .search-btn{
+    margin-left: 45px;
+  }
+  
+}
+
+
+.searchbtn:hover{
+  background: gray;
+  color: white;
+}
+
+.downloadBtn{
+  height: 16px;
+  position: absolute;
+  cursor: pointer;
+  font-size: 0.8px;
+  bottom: 50%;
+  left: 50%;
+  margin-top: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+@media screen and (max-width: 600px){
+
+  .downloadBtn{
+    font-size: 1px;
+    margin-top: 10px;
+    bottom: 50%;
+    left: 50%;
+    font-size: 1.3px;
+  }
+  
+}
+
+
+.loadMore{
+  position: relative;
+  bottom: 0%;
+  left: 50%;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding-top: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: black;
+  transition: 0.3s;
+}
+
+.loadMore::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: -2;
+  left: 0%;
+  right: 0%;
+  transform: scaleX(0);
+  transition: 0.3s ease-in-out ;
+}
+.loadMore:hover::after{
+  transform: scaleX(1);
+}
+@media screen and (max-width: 600px){
+
+  .loadMore{
+    left: 42%;
+  }
+  
+}
+
+.imageContainerEach{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  transition: 0.5s;
+  width: auto;
+}
+
+.imageContainerEach img:hover{
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+
+.imageContainerEach img:hover + .downloadBtn{
+  opacity: 1;
+}
+.imageContainerEach:hover .credits{
+  opacity: 1;
+}
+
+
+.credits{
+  position: absolute;
+  font-size: 10px;
+  left: 14%;
+  width: 290px;
+  display: flex;
+  justify-content: end;
+  bottom: -2%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+@media screen and (max-width:600px){
+
+  .credits{
+    width: 165px;
+    font-size: 5.5px;
+    left: 7%;
+    bottom: -1.5%;
+  }
+  
+}
